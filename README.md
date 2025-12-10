@@ -43,8 +43,9 @@ Then open `http://localhost:8000` in your browser.
 
 ```
 promptbuilder/
-├── index.php    # Main application file
-├── styles.css   # Stylesheet
+├── index.php    # Main HTML structure
+├── script.js    # Application logic
+├── styles.css   # Default stylesheet
 └── README.md    # This file
 ```
 
