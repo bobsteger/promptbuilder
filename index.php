@@ -227,6 +227,34 @@
                 </div>
             </div>
 
+            <!-- Avoid -->
+            <div class="prompt-option" id="option-avoid">
+                <div class="option-header">
+                    <input type="checkbox" id="enable-avoid" onchange="toggleOption('avoid')">
+                    <label for="enable-avoid">Avoid</label>
+                    <span class="help-text">What should the AI not include?</span>
+                </div>
+                <div class="option-content">
+                    <select id="avoid" disabled onchange="handleSelectChange('avoid')">
+                        <option value="">Select what to avoid...</option>
+                        <option value="technical jargon and complex terminology">Technical jargon</option>
+                        <option value="lengthy explanations and unnecessary details">Long explanations</option>
+                        <option value="code examples or snippets">Code examples</option>
+                        <option value="personal opinions or subjective statements">Personal opinions</option>
+                        <option value="speculation, assumptions, or guessing">Speculation or guessing</option>
+                        <option value="marketing language and promotional content">Marketing speak</option>
+                        <option value="complex vocabulary and difficult words">Complex vocabulary</option>
+                        <option value="humor, jokes, or casual language">Humor or jokes</option>
+                        <option value="emojis, special characters, or formatting">Emojis and special characters</option>
+                        <option value="repetition and redundant information">Repetition</option>
+                        <option value="filler words and unnecessary phrases">Filler words</option>
+                        <option value="controversial or sensitive topics">Controversial topics</option>
+                        <option value="__other__">Other...</option>
+                    </select>
+                    <input type="text" id="avoid-custom" class="custom-input" disabled placeholder="Enter what to avoid..." oninput="updatePrompt()">
+                </div>
+            </div>
+
             <!-- Evaluate -->
             <div class="prompt-option" id="option-evaluate">
                 <div class="option-header">

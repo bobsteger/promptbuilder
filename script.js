@@ -94,6 +94,7 @@ function updatePrompt() {
     const tone = getSelectedValue('tone', 'enable-tone');
     const references = getSelectedValue('references', 'enable-references');
     const constraints = getSelectedValue('constraints', 'enable-constraints');
+    const avoid = getSelectedValue('avoid', 'enable-avoid');
     const evaluate = getSelectedValue('evaluate', 'enable-evaluate');
     const iterate = getSelectedValue('iterate', 'enable-iterate');
 
@@ -106,6 +107,7 @@ function updatePrompt() {
     if (tone) parts.push(`Use a tone that is ${tone}. `);
     if (references) parts.push(`${references}. `);
     if (constraints) parts.push(`${constraints}. `);
+    if (avoid) parts.push(`Avoid ${avoid}. `);
     if (evaluate) parts.push(`${evaluate}. `);
     if (iterate) parts.push(`${iterate}. `);
 
@@ -167,7 +169,7 @@ function copyToClipboard() {
 }
 
 function resetAll() {
-    const options = ['task', 'persona', 'context', 'audience', 'format', 'tone', 'references', 'constraints', 'evaluate', 'iterate'];
+    const options = ['task', 'persona', 'context', 'audience', 'format', 'tone', 'references', 'constraints', 'avoid', 'evaluate', 'iterate'];
 
     options.forEach(function(optionName) {
         const checkbox = document.getElementById(`enable-${optionName}`);
