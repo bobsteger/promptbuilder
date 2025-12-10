@@ -65,21 +65,21 @@
                 <div class="option-content">
                     <select id="persona" disabled onchange="handleSelectChange('persona')">
                         <option value="">Select a persona...</option>
-                        <option value="You are an expert software engineer.">Expert Software Engineer</option>
-                        <option value="You are a technical writer.">Technical Writer</option>
-                        <option value="You are a data scientist.">Data Scientist</option>
-                        <option value="You are a creative copywriter.">Creative Copywriter</option>
-                        <option value="You are a business consultant.">Business Consultant</option>
-                        <option value="You are a teacher.">Teacher</option>
-                        <option value="You are a journalist.">Journalist</option>
-                        <option value="You are a marketing expert.">Marketing Expert</option>
-                        <option value="You are a UX designer.">UX Designer</option>
-                        <option value="You are a legal advisor.">Legal Advisor</option>
-                        <option value="You are a financial analyst.">Financial Analyst</option>
-                        <option value="You are a medical professional.">Medical Professional</option>
+                        <option value="an expert software engineer">Expert Software Engineer</option>
+                        <option value="a technical writer">Technical Writer</option>
+                        <option value="a data scientist">Data Scientist</option>
+                        <option value="a creative copywriter">Creative Copywriter</option>
+                        <option value="a business consultant">Business Consultant</option>
+                        <option value="a teacher">Teacher</option>
+                        <option value="a journalist">Journalist</option>
+                        <option value="a marketing expert">Marketing Expert</option>
+                        <option value="a UX designer">UX Designer</option>
+                        <option value="a legal advisor">Legal Advisor</option>
+                        <option value="a financial analyst">Financial Analyst</option>
+                        <option value="a medical professional">Medical Professional</option>
                         <option value="__other__">Other...</option>
                     </select>
-                    <input type="text" id="persona-custom" class="custom-input" disabled placeholder="e.g., You are a creative director." oninput="updatePrompt()">
+                    <input type="text" id="persona-custom" class="custom-input" disabled placeholder="e.g., a creative director." oninput="updatePrompt()">
                 </div>
             </div>
 
@@ -88,19 +88,19 @@
                 <div class="option-header">
                     <input type="checkbox" id="enable-context" onchange="toggleOption('context')">
                     <label for="enable-context">Context</label>
-                    <span class="help-text">What is the setting or background?</span>
+                    <span class="help-text">What is the setting or background? Who or what is this for?</span>
                 </div>
                 <div class="option-content">
                     <select id="context" disabled onchange="handleSelectChange('context')">
                         <option value="">Select context...</option>
-                        <option value="for a beginner audience">For beginners</option>
-                        <option value="for an advanced audience">For advanced users</option>
-                        <option value="for a technical audience">For technical audience</option>
-                        <option value="for a non-technical audience">For non-technical audience</option>
-                        <option value="for a business context">For business context</option>
-                        <option value="for an academic setting">For academic setting</option>
-                        <option value="for a startup environment">For startup environment</option>
-                        <option value="for enterprise use">For enterprise use</option>
+                        <option value="a beginner audience">For beginners</option>
+                        <option value="an advanced audience">For advanced users</option>
+                        <option value="a technical audience">For technical audience</option>
+                        <option value="a non-technical audience">For non-technical audience</option>
+                        <option value="a business context">For business context</option>
+                        <option value="an academic setting">For academic setting</option>
+                        <option value="a startup environment">For startup environment</option>
+                        <option value="enterprise use">For enterprise use</option>
                         <option value="__other__">Other...</option>
                     </select>
                     <input type="text" id="context-custom" class="custom-input" disabled placeholder="Enter custom context..." oninput="updatePrompt()">
@@ -117,13 +117,13 @@
                 <div class="option-content">
                     <select id="audience" disabled onchange="handleSelectChange('audience')">
                         <option value="">Select target audience...</option>
-                        <option value="targeted at developers">Developers</option>
-                        <option value="targeted at business executives">Business Executives</option>
-                        <option value="targeted at students">Students</option>
-                        <option value="targeted at general public">General Public</option>
-                        <option value="targeted at researchers">Researchers</option>
-                        <option value="targeted at marketers">Marketers</option>
-                        <option value="targeted at designers">Designers</option>
+                        <option value="developers">Developers</option>
+                        <option value="business executives">Business Executives</option>
+                        <option value="students">Students</option>
+                        <option value="general public">General Public</option>
+                        <option value="researchers">Researchers</option>
+                        <option value="marketers">Marketers</option>
+                        <option value="designers">Designers</option>
                         <option value="__other__">Other...</option>
                     </select>
                     <input type="text" id="audience-custom" class="custom-input" disabled placeholder="Enter custom audience..." oninput="updatePrompt()">

@@ -98,21 +98,21 @@ function updatePrompt() {
     const iterate = getSelectedValue('iterate', 'enable-iterate');
 
     // Build the prompt - persona first as a standalone sentence
-    if (persona) parts.push(persona);
-    if (task) parts.push(task);
-    if (context) parts.push(context);
-    if (audience) parts.push(audience);
-    if (format) parts.push(format);
-    if (tone) parts.push(tone);
-    if (references) parts.push(references);
-    if (constraints) parts.push(constraints);
-    if (evaluate) parts.push(evaluate);
-    if (iterate) parts.push(iterate);
+    if (persona) parts.push(`You are ${persona}. `);
+    if (task) parts.push(`Your task is to ${task}. `);
+    if (context) parts.push(`Consider the following context while generating your response: for ${context}. `);
+    if (audience) parts.push(`Write your answer for an audience of ${audience}. `);
+    if (format) parts.push(`Present the response using this format: ${format}.`);
+    if (tone) parts.push(`Use a tone that is ${tone}. `);
+    if (references) parts.push(`${references}. `);
+    if (constraints) parts.push(`${constraints}. `);
+    if (evaluate) parts.push(`${evaluate}. `);
+    if (iterate) parts.push(`${iterate}. `);
 
     const promptOutput = document.getElementById('prompt-output');
 
     if (parts.length > 0) {
-        promptOutput.textContent = parts.join(' ') + '.';
+        promptOutput.textContent = parts.join(' ');
         promptOutput.classList.remove('empty');
     } else {
         promptOutput.textContent = 'Your prompt will appear here as you make selections...';
