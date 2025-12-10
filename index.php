@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Prompt Builder</title>
-    <link rel="stylesheet" href="styles-warm.css">
+    <link rel="stylesheet" href="styles-neon.css">
 </head>
 <body>
     <div class="container">

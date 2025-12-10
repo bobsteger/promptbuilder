@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Builder - Warm</title>
+    <link rel="stylesheet" href="styles-warm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI Prompt Builder</h1>
+            <p>Craft powerful prompts for AI engines with ease</p>
+        </div>
+
+        <div class="instructions" id="instructions">
+            <div class="instructions-header" onclick="toggleInstructions()">
+                <h2>How to Use</h2>
+                <span class="toggle-icon" id="toggle-icon">−</span>
+            </div>
+            <ul class="instructions-content" id="instructions-content">
+                <li>Check the boxes next to the elements you want to include in your prompt</li>
+                <li>Select the appropriate option from each enabled dropdown</li>
+                <li>Watch your prompt build dynamically at the bottom of the page</li>
+                <li>Click "Copy to Clipboard" to use your prompt with any AI engine</li>
+            </ul>
+        </div>
+
+        <div class="builder-section">
+            <div class="prompt-option active" id="option-task">
+                <div class="option-header">
+                    <input type="checkbox" id="enable-task" checked>
+                    <label for="enable-task">Task</label>
+                    <span class="help-text">What action should the AI perform?</span>
+                </div>
+                <div class="option-content">
+                    <select id="task">
+                        <option value="">Select a task...</option>
+                        <option value="Write" selected>Write</option>
+                        <option value="Analyze">Analyze</option>
+                    </select>
+                    <input type="text" id="task-detail" class="task-detail-input" placeholder="Describe what you want..." value="Write a comprehensive guide">
+                </div>
+            </div>
+
+            <div class="prompt-option active" id="option-persona">
+                <div class="option-header">
+                    <input type="checkbox" id="enable-persona" checked>
+                    <label for="enable-persona">Persona</label>
+                    <span class="help-text">What role should the AI assume?</span>
+                </div>
+                <div class="option-content">
+                    <select id="persona">
+                        <option value="">Select a persona...</option>
+                        <option value="You are an expert software engineer." selected>Expert Software Engineer</option>
+                    </select>
+                    <input type="text" id="persona-custom" class="custom-input" disabled placeholder="e.g., You are a creative director.">
+                </div>
+            </div>
+
+            <div class="prompt-option" id="option-format">
+                <div class="option-header">
+                    <input type="checkbox" id="enable-format">
+                    <label for="enable-format">Format</label>
+                    <span class="help-text">How should the output be structured?</span>
+                </div>
+                <div class="option-content">
+                    <select id="format" disabled>
+                        <option value="">Select output format...</option>
+                        <option value="in a structured outline format">Structured Outline</option>
+                    </select>
+                    <input type="text" id="format-custom" class="custom-input" disabled placeholder="Enter custom format...">
+                </div>
+            </div>
+        </div>
+
+        <div class="output-section" id="output-section">
+            <h2>Generated Prompt</h2>
+            <div id="prompt-output" class="prompt-output">You are an expert software engineer. Write a comprehensive guide.</div>
+            <div class="button-group">
+                <button class="copy-button" id="copy-button">Copy to Clipboard</button>
+                <button class="reset-button" id="reset-button">Reset All</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleInstructions() {
+            const content = document.getElementById('instructions-content');
+            const icon = document.getElementById('toggle-icon');
+            const instructions = document.getElementById('instructions');
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                icon.textContent = '−';
+                instructions.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+                icon.textContent = '+';
+                instructions.classList.add('collapsed');
+            }
+        }
+    </script>
+</body>
+</html>
